@@ -1,0 +1,16 @@
+import math 
+def isPerfectSquare(num): 
+    x = int(math.sqrt(num)) 
+    return (x * x == num) 
+def checkFib(array, x): 
+    count = 0
+    for i in range(x): 
+        if (isPerfectSquare(5 * array[i] * array[i] + 4) or 
+            isPerfectSquare(5 * array[i] * array[i] - 4)): 
+            print(array[i], " ", end =""); 
+            count = count + 1
+    if (count == 0): 
+        print("all closed"); 
+array = [2,9,3,16,21,56,13,5] 
+x = len(array) 
+checkFib(array, x) 
